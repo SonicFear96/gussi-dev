@@ -1,0 +1,190 @@
+@font-face {
+  font-family: "rajdhaniregular";
+  src: url("../fonts/rajdhani-webfont.woff2") format("woff2"),
+    url("../fonts/rajdhani-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --white: #ffffff;
+  --violet: #192b3f;
+  --violet-hover: #2e4055;
+  --violet-active: #3b536d;
+  --bluesh-grey: #8a94a6;
+  --blue: #3d5876;
+  --sandy: #c9b8a8;
+}
+/* 
+tablet-width: 688px;
+desktop-width: 1360px;
+mobile-width-only: 687px; */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*SLIDER*/
+
+/*CONTENT*/
+.wrapper-content {
+  padding: 0 16px 0 16px;
+}
+.title__main {
+  font-family: "Rajdhani";
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--bluesh-grey);
+}
+
+/*About*/
+.about__title {
+  font-family: "Rajdhani";
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 32px;
+  color: var(--violet);
+}
+
+.about__subtitle {
+  font-family: "Rajdhani";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--bluesh-grey);
+}
+
+/*SELECT*/
+.select {
+  border-top: 1px solid #e1e6ed;
+  border-bottom: 1px solid #e1e6ed;
+}
+
+/*DETAIL*/
+
+.detail__text {
+  font-family: "Rajdhani";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--violet);
+}
+.detail__character {
+  font-family: "Rajdhani";
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--bluesh-grey);
+}
+
+/*COLLECTION*/
+.wrapper__collection {
+  background-image: url(../img/gussi_similar_collection_mobile_1.png);
+  padding: 20px 20px 20px 20px;
+}
+
+.wrapper__collection--last {
+  margin-top: 8px;
+  background-image: url(../img/gussi_similar_collection_mobile_2.png);
+}
+
+.collection__title {
+  font-family: "Rajdhani";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--white);
+}
+
+.collection__subtitle {
+  font-family: "Rajdhani";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--white);
+}
+
+/*FEEDBACK*/
+
+.feedback__title {
+  font-family: "Rajdhani";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  color: var(--violet);
+}
+
+.feedback__subtitle {
+  font-family: "Rajdhani";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--bluesh-grey);
+}
+
+@media (min-width: 688px) {
+  .feedback__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .feedback__subtitle {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+/*BUTTON*/
+.button-wrapper {
+  width: 100%;
+}
+.main__button {
+  font-family: "Rajdhani";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: center;
+  background-color: var(--violet);
+  color: var(--white);
+  width: 100%;
+  border: none;
+}
+
+@media (max-width: 687px) {
+}
+
+@media (min-width: 688px) {
+  .about__title {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: 0px;
+  }
+  .about__subtitle {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+@media (min-width: 688px) and (max-width: 1360) {
+  .collection__title {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+  }
+  .collection__subtitle {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: 1360px) {
+}
