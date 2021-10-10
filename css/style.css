@@ -12,6 +12,7 @@
   --violet-hover: #2e4055;
   --violet-active: #3b536d;
   --bluesh-grey: #8a94a6;
+  --light-grey: #e1e6ed;
   --blue: #3d5876;
   --sandy: #c9b8a8;
 }
@@ -89,7 +90,9 @@ mobile-width-only: 687px; */
 
 /*COLLECTION*/
 .wrapper__collection {
+  min-width: 288px;
   background-image: url(../img/gussi_similar_collection_mobile_1.png);
+  background-repeat: no-repeat;
   padding: 20px 20px 20px 20px;
 }
 
@@ -130,6 +133,29 @@ mobile-width-only: 687px; */
   font-weight: 500;
   line-height: 28px;
   color: var(--bluesh-grey);
+}
+
+.feedback__input {
+  width: 270px;
+  padding-left: 16px;
+  font-family: "Rajdhani";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 40px;
+  background: rgba(225, 230, 237, 0.2);
+  color: var(--bluesh-grey);
+  border-radius: 0.1;
+  border: none;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.checkbox__text {
+  font-family: "Rajdhani";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--violet);
 }
 
 @media (min-width: 688px) {
