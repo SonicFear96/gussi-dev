@@ -34,7 +34,92 @@ mobile-width-only: 687px; */
   overflow: hidden;
 }
 
+body {
+  font-family: "Rajdhani";
+}
+
+.main-wrapper {
+  max-width: 1360px;
+  display: grid;
+  margin: 0 auto;
+  grid-template-areas:
+    "slider"
+    "content";
+}
+
+@media (min-width: 1360px) {
+  .main-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "slider content";
+  }
+}
+
+.wrapper-slider {
+  grid-area: slider;
+}
+.wrapper-content {
+  grid-area: content;
+}
+
 /*SLIDER*/
+.slider {
+  width: 100%;
+  min-height: 600px;
+  background-repeat: no-repeat;
+}
+.slider--first {
+  background-image: url(../img/gussi_slider_mobile.png);
+}
+
+.slider__title {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 48px;
+  color: var(--white);
+  margin-top: 0;
+}
+.slider__subtitile {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--white);
+}
+
+.slider__counter {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+  color: var(--white);
+}
+.slider__counter .counter-last {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 688px) {
+  .slider__title {
+    font-size: 64px;
+    line-height: 64px;
+  }
+  .slider__subtitile {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media (min-width: 1360px) {
+  .slider__title {
+    font-size: 72px;
+    line-height: 72px;
+  }
+  .slider__subtitile {
+    font-size: 28px;
+  }
+
+  .slider--first {
+    background-image: url(../img/gussi_slider_desktop_1.png);
+  }
+}
 
 /*CONTENT*/
 .wrapper-content {
@@ -90,7 +175,7 @@ mobile-width-only: 687px; */
 
 /*COLLECTION*/
 .wrapper__collection {
-  min-width: 288px;
+  width: 100%;
   background-image: url(../img/gussi_similar_collection_mobile_1.png);
   background-repeat: no-repeat;
   padding: 20px 20px 20px 20px;
