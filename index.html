@@ -19,7 +19,11 @@
     <main class="main">
       <div class="main-wrapper">
         <div class="wrapper-slider">
+
           <div class="slider slider--first">
+            <a class="slider__logo">
+              <img src="./img/Logo.svg">
+            </a>
             <div class="slider__text">
               <h2 class="slider__title">
                 Light coat</h2>
@@ -95,40 +99,89 @@
             <div class="button-wrapper">
               <button class="main__button">Order Now</button>
             </div>
-            <p>Delivery</p>
-            <p>return</p>
+            <div class="wrapper__list">
+              <div class="list list--first">Delivery</div>
+              <div class="list list--second">Return</div>
+            </div>
           </div>
           <div class="collection">
             <h2 class="title__main">SIMILAR COLLECTION</h2>
-            <div class="wrapper__collection">
+            <div class="wrapper__collection collection__list--first">
+              <div class="collection__list">
               <h3 class="collection__title">Kingsman style</h3>
               <p class="collection__subtitle">More silk, more freedom</p>
             </div>
-            <div class="wrapper__collection wrapper__collection--last">
+            
+            <div class="collection__list collection__list--second">
                 <h3 class="collection__title">Denim goddess</h3>
                 <p class="collection__subtitle">More denim, more freedom</p>
               </div>
+            </div>
+              </div>
+              
               <div class="wrapper__feedback">
                 <h3 class="feedback__title">Subscribe our newsletter</h3>
-                <p class="feedback__subtitle">Get notified about new collections of Gussi Store</p>
+                <form>
+                <fieldset class="feedback__fieldset fieldset">
+                  <legend class="fieldset__legend ">Get notified about new collections of Gussi Store</legend>
+                  <div class="fieldset__content">
+                    <label class="field fieldset__item">
+                      <input class="field__input" type="text"  name="name" placeholder="Enter your name">
+                    </label>
+                    <label class="field fieldset__item">
+                      <input class="field__input" type="email" name="mail" placeholder="Enter your e-mail">
+                    </label>
+                  </div>
+                </fieldset>
+                <fieldset class="feedback__fieldset fieldset">
+                  <legend class="fieldset__legend ">Choose your gender:</legend>
+                  <div class="fieldset__content">
+                    <label class="field fieldset__item fieldset__item--circle">
+                      <input class="visually-hidden field__init" type="radio" name="filters_gender" value="male" checked>
+                      <span class="field__radio"></span>
+                      <span class="field__label field__label--bold">Male</span>
+                    </label>
+                    <label class="field fieldset__item fieldset__item--circle">
+                      <input class="visually-hidden field__init" type="radio" name="filters_gender" value="female">
+                      <span class="field__radio"></span>
+                      <span class="field__label field__label--bold">Female</span>
+                    </label>
+                  </div>
+                </fieldset>
+                <fieldset class="feedback__fieldset fieldset">
+                  <div class="fieldset__content fieldset__content--horizont">
+                    <label class="field fieldset__item fieldset__item--squad">
+                      <input class="visually-hidden  field__init" type="checkbox" name="subscribe" checked>
+                      <span class="field__radio field__radio--squad"></span>
+                      <span class="field__label field__label--checkbox">Look out for its standout party dresses, feminine details</span>
+                    </label>
+                    <div class="button-wrapper">
+                      <button class="main__button">Subscribe Gussi</button>
+                    </div>
+              </form>
+                
+                <!-- <fieldset class="feedback__fieldset">
+                  <legend class="feedback__subtitle">Get notified about new collections of Gussi Store</legend>
+                <div class="fieldset__wrapper feildset__wrapper--input">
                 <label class="feedback__label">
                   <input class="feedback__input" type="text" placeholder="Enter your name" />
                 </label>
                 <label class="feedback__label">
                   <input class="feedback__input" type="text" placeholder="Enter your e-mail" />
                 </label>
-                
-                <p class="feedback__subtitle">Choose your gender:</p>
+              </div>
+                <legend class="feedback__subtitle">Choose your gender:</legend>
                 <p>checkobks</p>
                 <p>checkobks</p>
                 <p>checkobks</p>
                 <p class="checkbox__text">Look out for its standout party dresses, feminine details</p>
                 <div class="button-wrapper">
                   <button class="main__button">Subscribe Gussi</button>
-                </div>
-              </div>
-           
-          </div>
+                </fieldset>
+                </div> -->
+     
+         
+          
         </div>
       </div>
     </main>

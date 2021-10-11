@@ -63,6 +63,10 @@ body {
 }
 
 /*SLIDER*/
+.slider__logo img {
+  width: 65px;
+  height: 36px;
+}
 .slider {
   width: 100%;
   min-height: 600px;
@@ -108,6 +112,13 @@ body {
 }
 
 @media (min-width: 1360px) {
+  .slider__logo img {
+    width: 95px;
+    height: 53px;
+  }
+  .slider {
+    position: fixed;
+  }
   .slider__title {
     font-size: 72px;
     line-height: 72px;
@@ -157,6 +168,15 @@ body {
   border-bottom: 1px solid #e1e6ed;
 }
 
+/*LIST*/
+.list {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0px;
+  color: var(--violet);
+}
+
 /*DETAIL*/
 
 .detail__text {
@@ -174,16 +194,21 @@ body {
 }
 
 /*COLLECTION*/
-.wrapper__collection {
+.collection__list {
   width: 100%;
-  background-image: url(../img/gussi_similar_collection_mobile_1.png);
-  background-repeat: no-repeat;
+
   padding: 20px 20px 20px 20px;
 }
 
-.wrapper__collection--last {
+.collection__list--first {
+  background-image: url(../img/gussi_similar_collection_mobile_1.png);
+  background-repeat: no-repeat;
+}
+
+.collection__list--second {
   margin-top: 8px;
   background-image: url(../img/gussi_similar_collection_mobile_2.png);
+  background-repeat: no-repeat;
 }
 
 .collection__title {
@@ -212,18 +237,20 @@ body {
   color: var(--violet);
 }
 
-.feedback__subtitle {
-  font-family: "Rajdhani";
+.fieldset__legend {
   font-size: 18px;
   font-weight: 500;
   line-height: 28px;
   color: var(--bluesh-grey);
 }
 
-.feedback__input {
+.feedback__fieldset {
+  border: none;
+}
+
+.field__input {
   width: 270px;
   padding-left: 16px;
-  font-family: "Rajdhani";
   font-size: 16px;
   font-weight: 500;
   line-height: 40px;
@@ -235,8 +262,7 @@ body {
   margin-bottom: 8px;
 }
 
-.checkbox__text {
-  font-family: "Rajdhani";
+.field__label--checkbox {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
