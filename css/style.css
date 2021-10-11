@@ -142,7 +142,7 @@ body {
   }
   .slider {
     position: fixed;
-    min-height: 768px;
+    height: 100%;
   }
   .slider__title {
     font-size: 72px;
@@ -193,13 +193,71 @@ body {
   border-bottom: 1px solid #e1e6ed;
 }
 
-.fieldset__product {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-.fieldset__product ul {
+/*PRODUCT CHECKED*/
+.list__colour,
+.list__size {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item__colour {
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  border: 1px solid white;
+}
+
+.item__colour:hover {
+  width: 35px;
+
+  border: 1px solid var(--bluesh-grey);
+  border-radius: 50%;
+}
+.item__colour:first-child {
+  content: "";
+  width: 26px;
+  height: 26px;
+  background-color: var(--violet);
+  border-radius: 50%;
+}
+.item__colour:nth-child(2) {
+  content: "";
+  width: 26px;
+  height: 26px;
+  background-color: #8a94a6;
+  border-radius: 50%;
+}
+.item__colour:nth-child(3) {
+  content: "";
+  width: 26px;
+  height: 26px;
+  background-color: var(--blue);
+  border-radius: 50%;
+}
+
+.item__size {
+  width: 35px;
+  height: 35px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: center;
+  color: grey;
+  border-radius: 50%;
+  border: 1px solid white;
+  box-sizing: border-box;
+}
+.item__size:hover {
+  border-width: 35px;
+  border: 1px solid var(--bluesh-grey);
+  color: var(--bluesh-grey);
+}
+
+.size--checked {
+  border-width: 35px;
+  border: 1px solid var(--violet);
+  color: var(--violet);
 }
 
 /*LIST*/
@@ -223,6 +281,40 @@ body {
 .detail__character {
   font-family: "Rajdhani";
   font-size: 16px;
+  font-weight: 500;
+  color: var(--bluesh-grey);
+}
+/*QUANTITY*/
+
+.quantity__text {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--bluesh-grey);
+}
+
+.quantity__button {
+  width: 28px;
+  height: 28px;
+  background-color: white;
+
+  border: none;
+}
+.quantity__button:hover {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--light-grey);
+  border-radius: 50%;
+}
+/*COST*/
+.cost__main {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 40px;
+  color: var(--sandy);
+}
+.cost__sub {
+  font-size: 30px;
   font-weight: 500;
   color: var(--bluesh-grey);
 }
@@ -442,6 +534,20 @@ body {
 
 .main__button:active {
   background-color: var(--violet-active);
+}
+.button__size {
+  color: var(--sandy);
+  border: 1px solid var(--sandy);
+  border-radius: 24px;
+  background-color: var(--white);
+  padding: 0 12px 0 12px;
+}
+.button__size:hover {
+  color: var(--white);
+  border: 1px solid var(--sandy);
+  border-radius: 24px;
+  background-color: var(--sandy);
+  padding: 0 12px 0 12px;
 }
 
 @media (max-width: 687px) {
