@@ -71,6 +71,7 @@ body {
 .slider__logo img {
   width: 65px;
   height: 36px;
+  object-fit: cover;
 }
 .slider {
   position: relative;
@@ -79,6 +80,12 @@ body {
   min-width: 320px;
   width: 100%;
   background-size: cover;
+}
+
+.slider__nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .slider__text {
@@ -130,6 +137,8 @@ body {
 
 @media (min-width: 1360px) {
   .slider {
+    position: fixed;
+    height: 768px;
     width: 600px;
   }
   .slider__logo {
@@ -140,10 +149,7 @@ body {
     width: 95px;
     height: 53px;
   }
-  .slider {
-    position: fixed;
-    height: 100%;
-  }
+
   .slider__title {
     font-size: 72px;
     line-height: 72px;
@@ -187,18 +193,87 @@ body {
   color: var(--bluesh-grey);
 }
 
+@media (min-width: 688px) {
+  .about__title {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: 0px;
+  }
+  .about__subtitle {
+    width: 400px;
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
 /*SELECT*/
 .select {
   border-top: 1px solid #e1e6ed;
   border-bottom: 1px solid #e1e6ed;
 }
 
+.filter__product {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+@media (min-width: 688px) {
+  .filter__product {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "colour size size-guide"
+      "quantity cost ";
+  }
+  .select--colour {
+    grid-area: "colour";
+  }
+  .select--size {
+    grid-area: "size";
+  }
+  .button-wrapper {
+    margin-top: 0;
+    grid-area: "size-guide";
+  }
+  .quantity {
+    grid-area: "quantity";
+  }
+  .cost {
+    grid-area: "cost";
+  }
+}
+@media (min-width: 1360px) {
+  .first--title {
+    margin-top: 56px;
+  }
+}
 /*PRODUCT CHECKED*/
+
+.list {
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--light-grey);
+}
 .list__colour,
 .list__size {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.list__colour {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.list__size {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .item__colour {
@@ -259,7 +334,8 @@ body {
   border: 1px solid var(--violet);
   color: var(--violet);
 }
-
+@media (min-width: 688px) {
+}
 /*LIST*/
 .list {
   font-size: 24px;
@@ -286,7 +362,14 @@ body {
 }
 /*QUANTITY*/
 
+.quantity__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .quantity__text {
+  margin: 0;
   font-size: 24px;
   font-weight: 500;
   line-height: 24px;
@@ -297,14 +380,25 @@ body {
   width: 28px;
   height: 28px;
   background-color: white;
-
   border: none;
+}
+.quantity__left {
+  margin-right: 10px;
+}
+.quantity__right {
+  margin-left: 10px;
 }
 .quantity__button:hover {
   width: 28px;
   height: 28px;
   border: 1px solid var(--light-grey);
   border-radius: 50%;
+}
+
+@media (min-width: 688px) {
+  .quantity__wrapper {
+    margin-top: 20px;
+  }
 }
 /*COST*/
 .cost__main {
@@ -324,11 +418,15 @@ body {
 .wrapper__collection {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 .collection__list {
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
-  width: 100%;
+  width: 296px;
   height: 160px;
+  border-radius: 5px;
 }
 
 .collection__list-wrapper {
@@ -462,6 +560,13 @@ body {
   background-position: 0 0;
 }
 
+.filter-radio {
+  padding-left: 35px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
 .filter-input-radio + label::before {
   content: "";
   position: absolute;
@@ -484,7 +589,7 @@ body {
 }
 
 .field__label--checkbox {
-  margin-left: 48px;
+  margin-left: 25px;
 }
 
 @media (min-width: 688px) {
@@ -504,18 +609,19 @@ body {
     width: 456px;
   }
   .fieldset-gender ul {
-    margin: -25px 309px 0 210px;
-    padding: 0;
+    padding-left: 35px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: start;
   }
 }
 
 /*BUTTON*/
-.button-wrapper {
-  width: 100%;
-}
+
 .main__button {
   font-size: 24px;
   padding: 12px 0 12px 0;
@@ -550,18 +656,16 @@ body {
   padding: 0 12px 0 12px;
 }
 
-@media (max-width: 687px) {
+.button-wrapper {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  width: 100%;
 }
 
 @media (min-width: 688px) {
-  .about__title {
-    font-size: 48px;
-    line-height: 56px;
-    letter-spacing: 0px;
-  }
-  .about__subtitle {
-    font-size: 20px;
-    line-height: 32px;
+  .button-wrapper {
+    margin-top: 30px;
+    width: 100%;
   }
 }
 
