@@ -86,17 +86,27 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+}
+
+.nav__button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 26px;
+  width: 80px;
 }
 
 .slider__text {
   position: absolute;
   bottom: 0;
+  left: 16px;
 }
 .slider--first {
   background-image: url(../img/gussi_slider_mobile.png);
 }
 
 .slider__title {
+  margin: 0;
   font-size: 48px;
   font-weight: 400;
   line-height: 48px;
@@ -104,6 +114,7 @@ body {
   margin-top: 0;
 }
 .slider__subtitile {
+  margin: 0;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -232,6 +243,10 @@ body {
   padding-bottom: 16px;
 }
 
+.select--size {
+  margin-top: 24px;
+}
+
 @media (min-width: 688px) {
   .filter__product {
     display: grid;
@@ -244,6 +259,7 @@ body {
     grid-area: "colour";
   }
   .select--size {
+    margin-top: 0;
     grid-area: "size";
   }
   .button-wrapper {
@@ -272,21 +288,38 @@ body {
   justify-content: space-between;
 }
 
+.list__details {
+  width: 100%;
+}
+
+.list__details summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+summary {
+  position: relative;
+}
+
+summary:after {
+  position: absolute;
+  content: "+";
+  right: 0;
+}
+
+details[open] summary:after {
+  content: "-";
+}
+
 .list__title {
   margin: 0;
 }
 
-.list__button {
-  margin-top: 15px;
-  padding: 0;
-  content: "";
-  border: none;
-  background-color: var(--white);
-  color: var(--violet);
-  width: 10px;
-  height: 10px;
-  background-image: url(../img/+.svg);
-  background-repeat: no-repeat;
+.list__text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--bluesh-grey);
 }
 
 .list__colour,
@@ -308,37 +341,57 @@ body {
   align-items: center;
 }
 
-.item__colour {
+/* .filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+} */
+
+.select__fieldset {
+  border: none;
+}
+.select__fieldset ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+/*FILTER COLOUR */
+
+.filter-radio--colour {
+  padding-left: 0;
+  padding-right: 10px;
+}
+.filter-input-radio--colour:checked + label::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
   width: 32px;
   height: 32px;
-  box-sizing: border-box;
-  border: 1px solid white;
-}
-
-.item__colour:hover {
-  width: 35px;
-
-  border: 1px solid var(--bluesh-grey);
+  border: 1px solid var(--violet);
   border-radius: 50%;
 }
-.item__colour:first-child {
-  content: "";
+
+.label__colour {
   width: 26px;
   height: 26px;
+}
+
+.colour--violet {
+  content: "";
   background-color: var(--violet);
   border-radius: 50%;
 }
-.item__colour:nth-child(2) {
+.colour--grey {
   content: "";
-  width: 26px;
-  height: 26px;
-  background-color: #8a94a6;
+  background-color: var(--bluesh-grey);
   border-radius: 50%;
 }
-.item__colour:nth-child(3) {
+.colour--blue {
   content: "";
-  width: 26px;
-  height: 26px;
   background-color: var(--blue);
   border-radius: 50%;
 }
@@ -451,6 +504,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 .collection__list {
   background-repeat: no-repeat;
@@ -468,14 +522,14 @@ body {
 }
 
 .collection__list--first {
-  background-image: url(../img/gussi_similar_collection_mobile_1.png);
-  background-repeat: no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.22), rgba(53, 41, 37, 0.22)),
+    url(../img/gussi_similar_collection_mobile_1.png) no-repeat;
 }
 
 .collection__list--second {
   margin-top: 8px;
-  background-image: url(../img/gussi_similar_collection_mobile_2.png);
-  background-repeat: no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.22), rgba(53, 41, 37, 0.22)),
+    url(../img/gussi_similar_collection_mobile_2.png) no-repeat;
 }
 
 .collection__title {
@@ -495,9 +549,10 @@ body {
   color: var(--white);
 }
 
-@media (min-width: 1360px) {
+@media (min-width: 688px) {
   .wrapper__collection {
     flex-direction: row;
+    justify-content: space-around;
   }
   .collection__list--second {
     margin-top: 0;
@@ -641,11 +696,9 @@ body {
     width: 456px;
   }
   .fieldset-gender ul {
-    padding-left: 35px;
-    padding-right: 20px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-
+    padding: 0;
+    padding-left: 160px;
+    margin-top: -28px;
     display: flex;
     flex-direction: row;
     justify-content: start;
