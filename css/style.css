@@ -138,7 +138,7 @@ body {
 @media (min-width: 1360px) {
   .slider {
     position: fixed;
-    height: 768px;
+    height: 100%;
     width: 600px;
   }
   .slider__logo {
@@ -195,18 +195,29 @@ body {
 
 @media (min-width: 688px) {
   .about__title {
-    margin-top: 24px;
-    margin-bottom: 16px;
     font-size: 48px;
     line-height: 56px;
     letter-spacing: 0px;
   }
   .about__subtitle {
-    width: 400px;
-    margin: 0;
     margin-bottom: 8px;
     font-size: 20px;
     line-height: 32px;
+  }
+}
+
+@media (min-width: 1360px) {
+  .about__title {
+    margin: 0;
+    margin-top: 25px;
+    font-size: 48px;
+    line-height: 56px;
+  }
+  .about__subtitle {
+    width: 400px;
+    margin: 0;
+    margin-top: 12px;
+    margin-bottom: 8px;
   }
 }
 
@@ -256,7 +267,28 @@ body {
 .list {
   padding-bottom: 8px;
   border-bottom: 1px solid var(--light-grey);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
+.list__title {
+  margin: 0;
+}
+
+.list__button {
+  margin-top: 15px;
+  padding: 0;
+  content: "";
+  border: none;
+  background-color: var(--white);
+  color: var(--violet);
+  width: 10px;
+  height: 10px;
+  background-image: url(../img/+.svg);
+  background-repeat: no-repeat;
+}
+
 .list__colour,
 .list__size {
   list-style: none;
