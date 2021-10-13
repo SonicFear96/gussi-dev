@@ -1,3 +1,27 @@
-let sliderArr = document.querySelectorAll(".wrapper-slider");
+var slideIndex = 1;
+showSlides(slideIndex);
+function rightSlide() {
+  showSlides((slideIndex += 1));
+}
+function leftSlide() {
+  showSlides((slideIndex -= 1));
+}
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slider");
+  console.log(slides);
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
 
-console.log(sliderArr);
+  slides[slideIndex - 1].style.display = "block";
+}
