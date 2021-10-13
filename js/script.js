@@ -1,4 +1,4 @@
-var slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
 function rightSlide() {
   showSlides((slideIndex += 1));
@@ -10,18 +10,18 @@ function currentSlide(n) {
   showSlides((slideIndex = n));
 }
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("slider");
-  console.log(slides);
-  if (n > slides.length) {
+  let i;
+  let slider = document.getElementsByClassName("slider");
+  console.log(slider);
+  if (n > slider.length) {
     slideIndex = 1;
   }
   if (n < 1) {
-    slideIndex = slides.length;
+    slideIndex = slider.length;
   }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  for (i = 0; i < slider.length; i++) {
+    slider[i].style.display = "none";
   }
 
-  slides[slideIndex - 1].style.display = "block";
+  slider[slideIndex - 1].style.display = "block";
 }
