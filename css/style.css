@@ -81,18 +81,38 @@ body {
   min-width: 320px;
   width: 100%;
   background-size: cover;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+@-webkit-keyframes fade {
+  from {
+      opacity: .8
+  }
+  to {
+      opacity: 1
+  }
+}
+@keyframes fade {
+  from {
+      opacity: .8
+  }
+  to {
+      opacity: 1
+  }
 }
 
 .slider__nav {
   margin-left: 200px;
 }
 .nav__button-wrapper {
-  bottom: 25px;
+  bottom: 15px;
   position: absolute;
   display: flex;
   justify-content: space-between;
   margin-left: 26px;
-  width: 80px;
+  width: 120px;
 }
 
 @media (min-width: 1360px) {
@@ -113,29 +133,23 @@ body {
   );
 }
 
-.wrapper-slider .slider  {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+.slider__prev, .slider__next {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  padding: 8px 5px 5px 5px;
+  margin-left: 10px;
+    margin-right: 10px;
 }
 
-@-webkit-keyframes fade {
-  from {
-      opacity: .4
-  }
-  to {
-      opacity: 1
-  }
+.slider__prev:hover, .slider__next:hover {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
 }
-@keyframes fade {
-  from {
-      opacity: .4
-  }
-  to {
-      opacity: 1
-  }
-}
+
 .slider--first {
   background-image: url(../img/gussi_slider_mobile.png);
 }
@@ -406,7 +420,7 @@ details[open] summary:after {
   border: none;
   padding: 0;
 }
-.select__fieldset ul {
+.fieldset__list-colour, .fieldset__list-size {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -414,9 +428,12 @@ details[open] summary:after {
   flex-direction: row;
 }
 
-.fieldset__list-colour{
-  margin-left: 3px;
+
+.fieldset__list-colour {
+  margin-left: 5px;
+  margin-top: 5px;
 }
+
 /*FILTER COLOUR */
 
 .filter-radio--colour {
@@ -460,7 +477,7 @@ details[open] summary:after {
   content: "";
   position: absolute;
   top: -2px;
-    left: -2px;
+  left: 0;
   width: 33px;
   height: 33px;
   border: 1px solid var(--bluesh-grey);
@@ -472,7 +489,7 @@ details[open] summary:after {
   content: "";
   position: absolute;
   top: -2px;
-    left: -2px;
+    left: 0;
   width: 33px;
   height: 33px;
   border: 1px solid var(--violet);
@@ -488,8 +505,7 @@ details[open] summary:after {
   text-align: center;
   color: grey;
   border-radius: 50%;
-  border: 1px solid white;
-  box-sizing: border-box;
+
 }
 
 
