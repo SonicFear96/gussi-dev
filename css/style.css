@@ -91,6 +91,7 @@ body {
   -webkit-animation-duration: 3s;
   animation-name: fade;
   animation-duration: 3s;
+
 }
 @-webkit-keyframes fade {
   from {
@@ -154,6 +155,7 @@ body {
   height: 40px;
   border: 1px solid var(--white);
   border-radius: 50%;
+
 }
 
 .slider__icon {
@@ -171,12 +173,15 @@ body {
 
 .slider--first {
   background-image: url(../img/gussi_slider_mobile.png);
+  
 }
 .slider--second {
   background-image: url(../img/gussi_slider_desktop_2.png);
+  
 }
 .slider--third {
   background-image: url(../img/gussi_slider_desktop_3.png);
+  
 }
 
 .slider__title {
@@ -473,6 +478,7 @@ details[open] summary:after {
   height: 32px;
   border: 1px solid var(--bluesh-grey);
   border-radius: 50%;
+  transition: 0.4s;
 }
 
 .filter-input-radio--colour:checked + label::after {
@@ -518,6 +524,7 @@ details[open] summary:after {
   height: 33px;
   border: 1px solid var(--bluesh-grey);
   border-radius: 50%;
+  transition: 0.4s;
 }
 
 .filter-input-radio--size:checked + label::after {
@@ -529,11 +536,13 @@ details[open] summary:after {
   height: 33px;
   border: 1px solid var(--violet);
   border-radius: 50%;
- 
+  transition: 0.4s
+
 }
 .filter-input-radio--size:checked + .label__size {
   font-size: 20px;
   color:var(--blue);
+  transition: 0.2s;
 }
 
 
@@ -750,9 +759,11 @@ details[open] summary:after {
   user-select: none;
 }
 
+
 .filter-input-checkbox:hover + label,
 .filter-input-checkbox:focus + label {
   color: var(--violet);
+  
 }
 
 .filter-input-checkbox + label::before {
@@ -763,6 +774,7 @@ details[open] summary:after {
   width: 19px;
   height: 19px;
   border: 1px solid var(--light-grey);
+  
 }
 
 .filter-input-checkbox:checked + label::before {
@@ -771,6 +783,7 @@ details[open] summary:after {
 
 .filter-input-checkbox:hover + label::before {
   border: 1px solid var(--violet);
+  transition: 0.4s;
 }
 .filter-input-checkbox:checked:hover + label::before {
   border: 1px solid var(--violet);
@@ -875,6 +888,7 @@ details[open] summary:after {
 
 .main__button:hover {
   background-color: var(--violet-hover);
+  transition: 0.4s;
 }
 
 .main__button:active {
@@ -893,6 +907,7 @@ details[open] summary:after {
   border-radius: 24px;
   background-color: var(--sandy);
   padding: 0 12px 0 12px;
+  transition: 0.4s;
 }
 
 .button-wrapper {
@@ -918,7 +933,4 @@ details[open] summary:after {
     font-size: 18px;
     line-height: 18px;
   }
-}
-
-@media (min-width: 1360px) {
 }
