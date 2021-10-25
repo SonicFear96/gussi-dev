@@ -146,7 +146,7 @@ body {
   border: none;
   padding: 8px 5px 5px 5px;
   margin-left: 10px;
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .slider__prev:hover, .slider__next:hover {
@@ -154,6 +154,19 @@ body {
   height: 40px;
   border: 1px solid var(--white);
   border-radius: 50%;
+}
+
+.slider__icon {
+  fill: white;
+}
+
+.slider__prev:active, .slider__next:active  {
+  width: 40px;
+  height: 40px;
+  background-color: var(--white);
+}
+.slider__prev:active .slider__icon , .slider__next:active .slider__icon {
+  fill: var(--bluesh-grey);
 }
 
 .slider--first {
@@ -450,6 +463,18 @@ details[open] summary:after {
   padding-left: 0;
   padding-right: 10px;
 }
+
+.filter-input-radio--colour + label:hover:after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--bluesh-grey);
+  border-radius: 50%;
+}
+
 .filter-input-radio--colour:checked + label::after {
   content: "";
   position: absolute;
@@ -460,6 +485,7 @@ details[open] summary:after {
   border: 1px solid var(--violet);
   border-radius: 50%;
 }
+
 
 .label__colour {
   width: 26px;
@@ -491,7 +517,6 @@ details[open] summary:after {
   width: 33px;
   height: 33px;
   border: 1px solid var(--bluesh-grey);
-  
   border-radius: 50%;
 }
 
@@ -499,12 +524,18 @@ details[open] summary:after {
   content: "";
   position: absolute;
   top: -2px;
-    left: 0;
+  left: 0;
   width: 33px;
   height: 33px;
   border: 1px solid var(--violet);
   border-radius: 50%;
+ 
 }
+.filter-input-radio--size:checked + .label__size {
+  font-size: 20px;
+  color:var(--blue);
+}
+
 
 .label__size {
   width: 35px;
@@ -731,7 +762,7 @@ details[open] summary:after {
   top: -1px;
   width: 19px;
   height: 19px;
-  border: 1px solid var(--violet);
+  border: 1px solid var(--light-grey);
 }
 
 .filter-input-checkbox:checked + label::before {
@@ -739,10 +770,23 @@ details[open] summary:after {
 }
 
 .filter-input-checkbox:hover + label::before {
-  border: 1px solid var(--light-grey);
+  border: 1px solid var(--violet);
 }
 .filter-input-checkbox:checked:hover + label::before {
   border: 1px solid var(--violet);
+}
+
+.filter-input-checkbox + label:hover:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 23px;
+  height: 17px;
+  
+  background-image: url("../img/vector-hover.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .filter-input-checkbox:checked + label::after {
